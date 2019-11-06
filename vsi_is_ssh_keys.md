@@ -42,7 +42,25 @@ When you provision a virtual server, you can select from available SSH keys or u
 
 You can manage and delete SSH keys by using the {{site.data.keyword.cloud_notm}} console.
 1. In [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.cloud.ibm.com/vpc), navigate to **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > VPC Infrastructure > Compute > SSH keys**.
-2. From here, you can add or delete an SSH key.
+2. From here, you can add or delete an SSH key. 
+
+To add an SSH key with the IBM Cloud console:
+
+1. Click the **Add SSH Key** link to display the SSH key creation dialog.
+2. Enter a name for your SSH key.
+3. Choose a specific resource group, if necessary.
+4. Then select your region from the drop down list.
+
+  You will only be shown a list of available regions for your specific resource group.
+  {: note}
+  
+5. Locate your SSH key by looking for a file called id_rsa.pub under an .ssh directory under your home directory, for example, `/Users/<USERNAME>/.ssh/id_rsa.pub`. 
+
+  There may be two files of the same file name in this directory. The "public" SSH key, contains the extension `.pub`, and the contents begin with `ssh-rsa` and end with your email address.
+  {: tip}
+  
+ 6. Paste the entire contents of the SSH file into the **Public key** space on the form.
+ 7. Click **Add SSH key** to create the your SSH key in the IBM Cloud console. It now displas in **VPC Infrastructure > Compute > SSH keys**.
 
 ## Managing SSH keys by using the CLI
 {: #managing-ssh-keys-by-using-the-cli}
